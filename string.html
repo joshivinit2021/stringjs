@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript String Properties</h2>
+
+    <p id="demo">The length property returns the length of a string:</p>
+    
+    <p id="demo1" class="demo">slice</p>
+
+    <p id="demo3">substring</p>
+
+    <p id="demo4">substr</p>
+
+    <p id="demo2" class="demo">Try it replace</p>
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo5">uppercase</p>
+
+    <p id="demo6">lowercase</p>
+
+    <p id="concat">concat</p>
+
+    <p id="trimstart">trimstart</p>
+
+    <p id="trimend">trimend</p>
+
+    <p id="padstart">padstart:</p>
+
+    <p id="padend">padend:</p>
+
+    <p id="charat">charat:</p>
+
+    <p id="indexOf">indexOf:</p>
+
+    <p id="lastindexOf">lastindexOf:</p>
+    
+    <p id="search">search:</p>
+
+    <script>
+    
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let txt2 = "apple,mango,barry,kiwi";
+    let txt3 = "banana,strawberry,Coconut,orange";
+    let text5 = "    hello World     ";
+    let text6 = "    hello World2222     ";
+    let txt8 = "Please locate where 'locate' occurs!";
+    document.getElementById("demo").innerHTML = text.length;
+    console.log(text.length);
+    document.getElementById("demo1").innerHTML = txt2.slice(6,11);
+    console.log(txt2.slice(6,11));
+
+    function myFunction(){
+        let text4 = document.getElementById("demo2").innerHTML;
+        document.getElementById("demo2").innerHTML=text4.replace("it","ititit");
+    }
+
+    document.getElementById("demo3").innerHTML=txt2.substring(0,5);
+
+    document.getElementById("demo4").innerHTML=txt2.substr(6,5);
+
+    document.getElementById("demo5").innerHTML=txt2.toLocaleUpperCase();
+
+    document.getElementById("demo6").innerHTML=txt2.toLocaleLowerCase();
+
+    document.getElementById("concat").innerHTML=txt2+txt3;
+
+    document.getElementById("trimstart").innerHTML=text5.trimStart();
+    console.log(text5.trimStart());
+
+    document.getElementById("trimend").innerHTML=text6.trimEnd();
+    console.log(text6.trimEnd());
+    
+    let numb = 5;
+    let text7 = numb.toString();
+    document.getElementById("padstart").innerHTML = text7.padStart(4,"x");
+    console.log(text7.padStart(4,"x"));
+
+    document.getElementById("padend").innerHTML = text7.padEnd(4,"x");
+    console.log(text7.padEnd(4,"x"));
+
+    document.getElementById("charat").innerHTML  = text.charAt(3);
+
+    document.getElementById("indexOf").innerHTML = txt8.indexOf("locate");
+    console.log(txt8.indexOf("locate"));
+
+    // above  method used index location after index value 
+    // document.getElementById("indexOf").innerHTML = txt8.indexOf("locate",15);
+ 
+
+    document.getElementById("lastindexOf").innerHTML = txt8.lastIndexOf("locate");
+    console.log(txt8.lastIndexOf("locate"));
+
+    document.getElementById("search").innerHTML = txt8.search("where");
+
+    console.log(txt8.match(/ate/g));
+
+    console.log(txt8.includes("where"));
+    console.log(txt8.includes("who"));
+
+    console.log(txt8.startsWith("Please"));
+    console.log(txt8.startsWith("please"));
+
+    console.log(txt8.endsWith("occurs!"));
+    console.log(txt8.endsWith("occurs"));
+
+    
+    </script>
+</body>
+</html>
